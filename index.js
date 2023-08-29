@@ -1,8 +1,14 @@
-const box = document.createElement("div");
-box.id = "box";
-document.body.appendChild(box);
+/* DOM VARIABLES */
+const calculateWeeksBtn = document.querySelector("#calculateWeeks");
 
-const button = document.createElement("button");
-button.innerText = "Button";
-button.id = "button-1"; 
+const designRate = document.querySelector("#designRate").value;
+const devRate = document.querySelector("#development-rate").value;
 
+
+calculateWeeksBtn.addEventListener("click",myFunction);
+
+function myFunction() {
+  console.log(designRate+0, typeof designRate)
+  console.log(document.getElementById("#designRate"))
+  alert (designRate);
+}

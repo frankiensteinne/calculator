@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  margin: 2px;
 }
 
 div {
@@ -13,10 +14,18 @@ label {
 }
 
 input {
-  width: 70%;
+  width: 60%;
   float: right;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
   resize: vertical;
+}
+#btn-div {
+  display: flex;
+  justify-content: center;
+}
+button {
+  width: 15%;
+  margin: 0 auto;
 }
