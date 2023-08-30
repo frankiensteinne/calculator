@@ -16,6 +16,7 @@ input {
   border-radius: 4px;
   resize: vertical;
 }
+
 #btnDiv {
   display: flex;
   justify-content: center;
@@ -40,4 +41,13 @@ button {
 
 #weeksContainer, #rateContainer {
   margin: 1.5rem;
+}
+
+.wrapper {
+  width: 80%;
+}
+
+.newInputEl {
+  width: 20%;
+  float: right;
 }
