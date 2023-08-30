@@ -3,11 +3,6 @@
   margin: 2px;
 }
 
-div {
-  width: 50%;
-  padding: 1rem;
-}
-
 label {
   padding: 12px 12px 12px 0;
   display: inline-block;
@@ -21,12 +16,28 @@ input {
   border-radius: 4px;
   resize: vertical;
 }
-#btn-div {
+#btnDiv {
   display: flex;
   justify-content: center;
+  margin: 1rem;
 }
 
 button {
   width: 15%;
   margin: 0 auto;
+}
+
+#container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+#formBody, #otherHalf {
+  width: 50%;
+  padding: 2px;
+}
+
+#weeksContainer, #rateContainer {
+  margin: 1.5rem;
 }

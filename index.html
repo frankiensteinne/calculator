@@ -10,28 +10,38 @@
 </head>
 <body>
   <h1>Project Proposal Calculator</h1>
+  <div id="container">
+    <div id="formBody">
+    <form>
+      <div id="rateContainer">
+        <label for="design-rate">Design Sprint Rate:</label><input type="text" name="design-rate" id="designRate"> </br>
+        <label for="development-rate">Development Sprint Rate:</label><input type="text" name="development-rate" id="developmentRate"></br>
+        <label for="deployment-rate">Deployment Activities Rate:</label><input type="text" name="deployment-rate" id="deploymentRate"></br>
+        <label for="kt-rate">KT Sessions Rate:</label><input type="text" name="kt-rate" id="ktRate"></br>
+      </div>
 
-  <!-- <form> -->
-    <div id="rate-container">
-      <label for="design-rate">Design Sprint Rate:</label><input type="text" name="design-rate" id="designRate"> </br>
-      <label for="development-rate">Development Sprint Rate:</label><input type="text" name="development-rate" id="developmentRate"></br>
-      <label for="deployment-rate">Deployment Activities Rate:</label><input type="text" name="deployment-rate" id="deploymentRate"></br>
-      <label for="kt-rate">KT Sessions Rate:</label><input type="text" name="kt-rate" id="ktRate"></br>
-    </div>
+      <div id="weeksContainer">
+        <label for="number-of-weeks">Total Number of Weeks:</label><input type="text" name="number-of-weeks" id="numberOfWeeks"> </br></br>
+        <label for="number-of-design">Number of Design Sprints:</label><input type="text" name="number-of-design" id="numberOfDesign"></br>
+        <label for="number-of-development">Number of Development Sprints:</label><input type="text" name="number-of-development" id="numberOfDevelopment"></br>
+        <label for="number-of-deployment">Number of Deployment Activities:</label><input type="text" name="number-of-deployment" id="numberOfDeployment"></br>
+        <label for="number-of-kt">Number of KT Sessions:</label><input type="text" name="number-of-kt" id="numberOfKt"></br>
+      </div>
 
-    <div id="weeks-container">
-      <label for="number-of-weeks">Total Number of Weeks:</label><input type="text" name="number-of-weeks" id="numberOfWeeks"> </br></br>
-      <label for="number-of-design">Number of Design Sprints:</label><input type="text" name="number-of-design" id="numberOfDesign"></br>
-      <label for="number-of-development">Number of Development Sprints:</label><input type="text" name="number-of-development" id="numberOfDevelopment"></br>
-      <label for="number-of-deployment">Number of Deployment Activities:</label><input type="text" name="number-of-deployment" id="numberOfDeployment"></br>
-      <label for="number-of-kt">Number of KT Sessions:</label><input type="text" name="number-of-kt" id="numberOfKt"></br>
-    </div>
+      <div id="btnDiv">
+        <button type ="button" id="calculate">Calculate</button>
+      </div>
 
-    <div id="btn-div">
-      <button type ="button" id="calculateWeeks">Calculate Weeks</button>
-    </div>
-  <!-- </form> -->
+      <div id="totalValue">
 
+      </div>
+    </form>
+  </div>
+
+  <div id="otherHalf">
+
+  </div>
+</div>
   
 </body>
 </html>
