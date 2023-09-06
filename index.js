@@ -13,6 +13,7 @@ const noOfDep = document.getElementById("numberOfDeployment");
 const noOfKt = document.getElementById("numberOfKt");
 
 const noOfMaintenance = document.getElementById("maintenanceMonth")
+const maintenanceRate = document.getElementById("maintenanceValue")
 
 const totalValueCont = document.getElementById("totalValue");
 const otherHalf = document.getElementById("otherHalf");
