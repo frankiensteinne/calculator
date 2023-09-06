@@ -12,12 +12,15 @@ const noOfDev = document.getElementById("numberOfDevelopment");
 const noOfDep = document.getElementById("numberOfDeployment");
 const noOfKt = document.getElementById("numberOfKt");
 
+const noOfMaintenance = document.getElementById("maintenanceMonth")
+
 const totalValueCont = document.getElementById("totalValue");
 const otherHalf = document.getElementById("otherHalf");
 const newBtn = document.createElement("button");
 
 
 const calculate = () => {
+  otherHalf.innerHTML="";
   totalValueCont.innerHTML = "";
 
   const designValue = Number(designRate.value) * Number(noOfDesign.value);
@@ -25,10 +28,14 @@ const calculate = () => {
   const depValue = Number(depRate.value) * Number(noOfDep.value);
   const ktValue = Number(ktRate.value) * Number(noOfKt.value);
   const overAll = designValue + devValue + depValue + ktValue;
+  const withVat = overAll + (overAll*0.12)
 
   const newHeading = document.createElement("h2");
-  newHeading.innerHTML = `Total: PHP ${overAll.toFixed(2)}`;
+  newHeading.innerHTML = `Total: PHP ${overAll.toFixed(2)}<br>
+  With Vat: PHP ${withVat.toFixed(2)}`;
   totalValueCont.appendChild(newHeading);
+
+  
 
   const noOfWeeksNum = Number(noOfWeeks.value);
   const weekTracker = Math.ceil(noOfWeeksNum / 4 + 1);
@@ -41,6 +48,8 @@ const calculate = () => {
 
     const newContainer = document.createElement("div");
     otherHalf.appendChild(newContainer);
+    newContainer.innerHTML = "";
+
 
     if (startOfTracker === 1) {
       newContainer.innerHTML = `<h3>Amount: PHP ${(overAll / 2).toFixed(2)}</h3>`;
