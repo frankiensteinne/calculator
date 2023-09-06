@@ -29,11 +29,21 @@ const calculate = () => {
   const depValue = Number(depRate.value) * Number(noOfDep.value);
   const ktValue = Number(ktRate.value) * Number(noOfKt.value);
   const overAll = designValue + devValue + depValue + ktValue;
+
   const withVat = overAll + (overAll*0.12)
 
+  const maintenanceTotal = Number(noOfMaintenance.value)*Number(maintenanceRate.value)
+  const overAllWithMaintenance = overAll + maintenanceTotal
+  const overAllWithMaintenanceAndVat = overAllWithMaintenance  + (overAllWithMaintenance*0.12)
+
   const newHeading = document.createElement("h2");
-  newHeading.innerHTML = `Total: PHP ${overAll.toFixed(2)}<br>
-  With Vat: PHP ${withVat.toFixed(2)}`;
+  newHeading.innerHTML = `
+ 
+  Service Total: PHP ${overAll.toFixed(2)}<br>
+  Service Total With Vat: PHP ${withVat.toFixed(2)}</br></br>
+  Maintenance: PHP ${maintenanceTotal.toFixed(2)}</br>
+  Total with Maintenance: PHP ${overAllWithMaintenance}</br>
+  Total with Maintenance & VAT: PHP ${overAllWithMaintenanceAndVat}` 
   totalValueCont.appendChild(newHeading);
 
   
