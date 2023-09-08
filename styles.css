@@ -9,7 +9,7 @@ label {
 }
 
 input {
-  width: 60%;
+  width: 50%;
   float: right;
   padding: 12px;
   border: 1px solid #ccc;
@@ -35,11 +35,11 @@ button {
 }
 
 #formBody, #otherHalf {
-  width: 50%;
+  width: 45%;
   padding: 2px;
 }
 
-#weeksContainer, #rateContainer {
+#weeksContainer, #rateContainer, #maintenanceCalculator{
   margin: 1.5rem;
 }
 

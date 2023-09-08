@@ -19,6 +19,9 @@ const totalValueCont = document.getElementById("totalValue");
 const otherHalf = document.getElementById("otherHalf");
 const newBtn = document.createElement("button");
 
+const toPHP = (num) => {
+  return Number(num).toLocaleString('en-US', { style: 'currency', currency: 'PHP' });
+}
 
 const calculate = () => {
   otherHalf.innerHTML="";
@@ -39,11 +42,11 @@ const calculate = () => {
   const newHeading = document.createElement("h2");
   newHeading.innerHTML = `
  
-  Service Total: PHP ${overAll.toFixed(2)}<br>
-  Service Total With Vat: PHP ${withVat.toFixed(2)}</br></br>
-  Maintenance: PHP ${maintenanceTotal.toFixed(2)}</br>
-  Total with Maintenance: PHP ${overAllWithMaintenance}</br>
-  Total with Maintenance & VAT: PHP ${overAllWithMaintenanceAndVat}` 
+  Service Total: ${toPHP(overAll)}<br>
+  Service Total With Vat: ${toPHP(withVat)}</br></br>
+  Maintenance: ${toPHP(maintenanceTotal)}</br>
+  Total with Maintenance: ${toPHP(overAllWithMaintenance)}</br>
+  Total with Maintenance & VAT: ${toPHP(overAllWithMaintenanceAndVat)}` 
   totalValueCont.appendChild(newHeading);
 
   
@@ -63,7 +66,8 @@ const calculate = () => {
 
 
     if (startOfTracker === 1) {
-      newContainer.innerHTML = `<h3>Amount: PHP ${(overAll / 2).toFixed(2)}</h3>`;
+      newContainer.innerHTML = `<h3>Amount: ${toPHP(overAll / 2)} <br>
+      With Vat:${toPHP(withVat / 2)} </h3>`;
     } else {
       newContainer.innerHTML = `
         <div class="wrapper">
@@ -104,8 +108,10 @@ const updatePayables = (container) => {
       numDepValue * Number(depRate.value) +
       numKtValue * Number(ktRate.value)) /
     2;
+  const payablesWithVat = (payables + payables*0.12)
 
-  const payablesText = `Amount: PHP ${payables.toFixed(2)}`;
+  const payablesText = `${toPHP(payables)} <br>
+  With Vat: ${toPHP(payablesWithVat)}`;
   container.querySelector(".payablesResult").innerHTML = `<h3>${payablesText}</h3>`;
 };
 
